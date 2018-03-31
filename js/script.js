@@ -26,9 +26,9 @@
 // } while (!correctData);
 
 
-function prn(val) {
-    document.write(val + '<br>');
-}
+//function prn(val) {
+//    document.write(val + '<br>');
+//}
 
 // function getAge(age) {
 //     // if (age >= 18) {
@@ -92,62 +92,100 @@ function prn(val) {
 // }
 // prn(counter);
 
-function beep () {
-   prn(this.model + ': ' + 'Beep'); 
-}
+//function beep () {
+//   prn(this.model + ': ' + 'Beep'); 
+//}
 
-let car = {};
-car.make = 'Audi'; // car['make'] = 'Audi';
-car.model = 'TT Cabrio';
-car.color = 'red';
-car.price = 50000;
-car.beep = beep;
-car.beep();
+//let car = {};
+//car.make = 'Audi'; // car['make'] = 'Audi';
+//car.model = 'TT Cabrio';
+//car.color = 'red';
+//car.price = 50000;
+//car.beep = beep;
+//car.beep();
 
-let hummer = {};
-hummer.model = 'H2';
-hummer.beep = beep;
-hummer.beep();
+//let hummer = {};
+//hummer.model = 'H2';
+//hummer.beep = beep;
+//hummer.beep();
 
-let lanos = {
-    model: 'Lanos',
-    make: 'ZAZ',
-    color: 'grey',
-    beep: beep
-}
-lanos.beep();
+//let lanos = {
+//    model: 'Lanos',
+//    make: 'ZAZ',
+//    color: 'grey',
+//    beep: beep
+//}
+//lanos.beep();
 
-function Car(model, make, color) {
-    this.model = model;
-    this.make = make;
-    this.color = color;
-    this.beep = beep;
-    return this;
-}
+//function Car(model, make, color) {
+//    this.model = model;
+//    this.make = make;
+//    this.color = color;
+//    this.beep = beep;
+//    return this;
+//}
 
-let mcLaren = new Car('F1', 'McLaren', 'silver');
-let ferrariF50 = new Car('F50', 'Ferrari', 'red');
-mcLaren.beep();
-ferrariF50.beep();
+//let mcLaren = new Car('F1', 'McLaren', 'silver');
+//let ferrariF50 = new Car('F50', 'Ferrari', 'red');
+//mcLaren.beep();
+//ferrariF50.beep();
 
-class SuperCar {
-    constructor (model, make, color) {
-        this.model = model;
-        this.make = make;
-        this.color = color;
-    } 
-    beep() {
-       prn(this.model + ': ' + 'Beep-beep');  
+//class SuperCar {
+//    constructor (model, make, color) {
+//        this.model = model;
+//        this.make = make;
+//        this.color = color;
+//    } 
+//    beep() {
+//       prn(this.model + ': ' + 'Beep-beep');  
+//    }
+//}
+
+//let bugattiVeyron = new SuperCar('Veyron', 'Bugatti', 'grey');
+//bugattiVeyron.beep();
+
+//let bugattiChiron = Object.create(bugattiVeyron);
+//bugattiChiron.model = 'Chiron';
+//bugattiChiron.beep();
+
+
+//function prn(val) {
+//    document.write(val + '<br>');
+//}
+
+
+
+const n = parseFloat(prompt('Enter n'));
+/*Recursia
+function fib(n) {
+    if (n < 2) { return n }
+    else {
+        return fib(n - 1) + fib(n - 2);
     }
 }
 
-let bugattiVeyron = new SuperCar('Veyron', 'Bugatti', 'grey');
-bugattiVeyron.beep();
 
-let bugattiChiron = Object.create(bugattiVeyron);
-bugattiChiron.model = 'Chiron';
-bugattiChiron.beep();
+for (let i = 0; i <= n; i++) {
+    document.write(fib(i));
+}
 
+const result = fib(n);
+document.write(result);
+*/
 
-
-
+function fib(n) {
+  let a = 1;
+  let b = 1;
+  for (let i = 3; i <= n; i++) {
+    let c = a + b;
+        a = b;
+        b = c;
+  }
+  return b;
+}
+for (let i = 1; i <= n; i++){
+    document.write(fib(i));
+}
+/*
+const result = fib(n);
+document.write(result);*/
