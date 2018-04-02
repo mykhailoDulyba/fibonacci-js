@@ -6,8 +6,9 @@ const n = parseFloat(prompt('Recursia approach number'));
     document.write(re);
     */
 function fibRec(n) {
-    if (n < 2) { return n }
-    else {
+    if (n < 2) {
+        return n
+    } else {
         return fibRec(n - 1) + fibRec(n - 2);
     }
 }
@@ -42,11 +43,11 @@ document.write('<br>');
 const d = parseFloat(prompt('Array approach number'));
 
 function fibArray(d) {
-let array = [1, 1];
-    for (let i =3; i <= d; i++) {
+    let array = [1, 1];
+    for (let i = 3; i <= d; i++) {
         array[2] = array[0] + array[1];
-        array[0]=array[1];
-        array[1]=array[2];
+        array[0] = array[1];
+        array[1] = array[2];
     }
     return array[1];
 }
@@ -54,5 +55,3 @@ let array = [1, 1];
 for (let i = 1; i <= d; i++) {
     document.write(fibArray(i));
 }
-
-
