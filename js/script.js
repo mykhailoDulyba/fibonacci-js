@@ -1,10 +1,7 @@
 //Recursia approach
 
 const n = parseFloat(prompt('Recursia approach number'));
-/*
-    const re= fibRec(n);
-    document.write(re);
-    */
+
 function fibRec(n) {
     if (n < 2) {
         return n
